@@ -72,33 +72,31 @@
 graph TD
     Client("移动端 / 管理后台") -->|RESTful API| Gateway("Nginx 网关")
     
-    subgraph "Core Server (Spring Boot)"
+    subgraph CoreServer["Core Server (Spring Boot)"]
         Gateway --> Auth("认证授权 JWT")
         Auth --> Controller("控制层 Web")
-        
-        subgraph "Business Logic"
-            Controller --> UserService("用户服务")
-            Controller --> MarketService("市场服务")
-            Controller --> LifeService("生活服务")
-        end
-        
-        Business Logic --> MP("MyBatis-Plus")
+        Controller --> UserService("用户服务")
+        Controller --> MarketService("市场服务")
+        Controller --> LifeService("生活服务")
+        UserService --> MP("MyBatis-Plus")
+        MarketService --> MP
+        LifeService --> MP
     end
     
-    subgraph "Data Storage"
+    subgraph DataStorage["Data Storage"]
         MP --> MySQL[("MySQL 主库")]
         LifeService --> Redis[("Redis 缓存")]
         MarketService --> OSS[("文件存储")]
     end
     
-    subgraph "External"
+    subgraph External["External"]
         LifeService --> AI("AI 大模型接口")
     end
 
     style Client fill:#f9f,stroke:#333,stroke-width:2px
     style Gateway fill:#bbf,stroke:#333,stroke-width:2px
-    style Core Server fill:#dfd,stroke:#333,stroke-width:2px
-    style Data Storage fill:#ffd,stroke:#333,stroke-width:2px
+    style CoreServer fill:#dfd,stroke:#333,stroke-width:2px
+    style DataStorage fill:#ffd,stroke:#333,stroke-width:2px
 ```
 
 ## 🧬 核心流程 (Core Process)
