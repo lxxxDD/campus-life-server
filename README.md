@@ -107,21 +107,16 @@ graph TD
         LifeService --> AI("AI 大模型接口")
     end
 
-    %% Dracula Color Palette
-    %% Purple: #bd93f9
-    %% Cyan: #8be9fd
-    %% Green: #50fa7b
-    %% Orange: #ffb86c
-    %% Pink: #ff79c6
-    %% Selection: #44475a
+    %% Neon Cyberpunk Palette
+    %% High Contrast & Glowing Effect
     
-    style Client fill:#bd93f9,stroke:#44475a,stroke-width:2px,color:#282a36
-    style Gateway fill:#8be9fd,stroke:#44475a,stroke-width:2px,color:#282a36
-    style CoreServer fill:#50fa7b,stroke:#44475a,stroke-width:2px,color:#282a36
-    style DataStorage fill:#ffb86c,stroke:#44475a,stroke-width:2px,color:#282a36
-    style External fill:#ff79c6,stroke:#44475a,stroke-width:2px,color:#282a36
+    style Client fill:#000000,stroke:#00ffff,stroke-width:2px,color:#00ffff
+    style Gateway fill:#000000,stroke:#ff00ff,stroke-width:2px,color:#ff00ff
+    style CoreServer fill:#000000,stroke:#00ff00,stroke-width:2px,color:#00ff00
+    style DataStorage fill:#000000,stroke:#ffff00,stroke-width:2px,color:#ffff00
+    style External fill:#000000,stroke:#ff9900,stroke-width:2px,color:#ff9900
     
-    linkStyle default stroke:#6272a4,stroke-width:2px
+    linkStyle default stroke:#ffffff,stroke-width:2px
 ```
 
 ## 🧬 核心流程 (Core Process)
