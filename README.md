@@ -1,30 +1,6 @@
 <div align="center">
 
-<!-- 访客统计 (隐形装X) -->
-<img src="https://profile-counter.glitch.me/lxxxDD-campus-life-server/count.svg" alt="Visitors" />
-
-<!-- 动态打字机效果 Banner -->
-<a href="https://github.com/lxxxDD/campus-life-server">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=40&duration=3000&pause=1000&color=2094F7&center=true&vCenter=true&width=600&lines=Campus+Life+Server;Spring+Boot+Eco-System;Next+Gen+Campus+Solution" alt="Typing SVG" />
-</a>
-
-<br>
-
-<!-- 核心徽章矩阵 -->
-<p>
-  <a href="https://github.com/lxxxDD/campus-life-server">
-    <img src="https://img.shields.io/github/repo-size/lxxxDD/campus-life-server?style=for-the-badge&logo=github&color=9C27B0" />
-  </a>
-  <a href="https://github.com/lxxxDD/campus-life-server/issues">
-    <img src="https://img.shields.io/github/issues/lxxxDD/campus-life-server?style=for-the-badge&logo=github&color=F44336" />
-  </a>
-  <a href="https://github.com/lxxxDD/campus-life-server/stargazers">
-    <img src="https://img.shields.io/github/stars/lxxxDD/campus-life-server?style=for-the-badge&logo=github&color=FFC107" />
-  </a>
-  <a href="https://github.com/lxxxDD/campus-life-server/commits">
-    <img src="https://img.shields.io/github/last-commit/lxxxDD/campus-life-server?style=for-the-badge&logo=github&color=4CAF50" />
-  </a>
-</p>
+# 🎓 Campus Life Server
 
 <!-- 技术栈徽章 -->
 <p>
@@ -36,35 +12,31 @@
   <img src="https://img.shields.io/badge/JWT-Auth-000000?style=for-the-badge&logo=jsonwebtokens" />
 </p>
 
-<br>
+<!-- 仓库徽章 -->
+<p>
+  <a href="https://github.com/lxxxDD/campus-life-server">
+    <img src="https://img.shields.io/github/repo-size/lxxxDD/campus-life-server?style=flat-square&logo=github" />
+  </a>
+  <a href="https://github.com/lxxxDD/campus-life-server/stargazers">
+    <img src="https://img.shields.io/github/stars/lxxxDD/campus-life-server?style=flat-square&logo=github" />
+  </a>
+  <a href="https://github.com/lxxxDD/campus-life-server/commits">
+    <img src="https://img.shields.io/github/last-commit/lxxxDD/campus-life-server?style=flat-square&logo=github" />
+  </a>
+</p>
 
-<h3 align="center">🚀 让校园生活从未如此极客</h3>
+<h3>🚀 让校园生活从未如此极客</h3>
 
-<p align="center">
+<p>
   <a href="#-系统架构">🗺️ 系统架构</a> •
-  <a href="#-数据模型">💾 数据模型</a> •
+  <a href="#-核心功能">⚡ 核心功能</a> •
   <a href="http://localhost:8080/doc.html">📖 接口文档</a> •
-  <a href="#-开发计划">📅 开发计划</a>
+  <a href="#-快速开始">� 快速开始</a>
 </p>
 
 </div>
 
 ---
-
-## 📊 极客统计 (GitHub Stats)
-
-<div align="center">
-  <table style="border: none;">
-    <tr>
-      <td style="border: none; padding-right: 20px;">
-        <img src="https://github-readme-stats.vercel.app/api?username=lxxxDD&show_icons=true&theme=radical&count_private=true&hide_border=true" alt="lxxxDD's Stats" />
-      </td>
-      <td style="border: none;">
-        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=lxxxDD&layout=compact&theme=radical&hide_border=true&langs_count=6" alt="Top Langs" />
-      </td>
-    </tr>
-  </table>
-</div>
 
 ## 🗺️ 系统架构 (System Architecture)
 
