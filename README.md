@@ -1,148 +1,156 @@
 <div align="center">
 
-# 🎓 Campus Life Server
+<!-- 动态打字机效果 Banner -->
+<a href="https://github.com/lxxxDD/campus-life-server">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=40&duration=3000&pause=1000&color=2094F7&center=true&vCenter=true&width=600&lines=Campus+Life+Server;Spring+Boot+Eco-System;Next+Gen+Campus+Solution" alt="Typing SVG" />
+</a>
 
-<img src="https://img.shields.io/badge/Spring%20Boot-3.3.5-brightgreen?style=for-the-badge&logo=springboot" />
-<img src="https://img.shields.io/badge/Java-17-orange?style=for-the-badge&logo=openjdk" />
-<img src="https://img.shields.io/badge/MySQL-8.0-blue?style=for-the-badge&logo=mysql" />
-<img src="https://img.shields.io/badge/MyBatis--Plus-3.5.7-red?style=for-the-badge" />
+<br>
 
-**🚀 为校园生活而生的后端服务**
+<!-- 核心徽章矩阵 -->
+<p>
+  <a href="https://github.com/lxxxDD/campus-life-server">
+    <img src="https://img.shields.io/github/repo-size/lxxxDD/campus-life-server?style=for-the-badge&logo=github&color=9C27B0" />
+  </a>
+  <a href="https://github.com/lxxxDD/campus-life-server/issues">
+    <img src="https://img.shields.io/github/issues/lxxxDD/campus-life-server?style=for-the-badge&logo=github&color=F44336" />
+  </a>
+  <a href="https://github.com/lxxxDD/campus-life-server/stargazers">
+    <img src="https://img.shields.io/github/stars/lxxxDD/campus-life-server?style=for-the-badge&logo=github&color=FFC107" />
+  </a>
+  <a href="https://github.com/lxxxDD/campus-life-server/commits">
+    <img src="https://img.shields.io/github/last-commit/lxxxDD/campus-life-server?style=for-the-badge&logo=github&color=4CAF50" />
+  </a>
+</p>
 
-[📖 API文档](http://localhost:8080/doc.html) · [🐛 报告Bug](https://github.com/lxxxDD/campus-life-server/issues) · [💡 功能建议](https://github.com/lxxxDD/campus-life-server/issues)
+<!-- 技术栈徽章 -->
+<p>
+  <img src="https://img.shields.io/badge/Spring_Boot-3.3.5-brightgreen?style=for-the-badge&logo=springboot" />
+  <img src="https://img.shields.io/badge/Java-17-orange?style=for-the-badge&logo=openjdk" />
+  <img src="https://img.shields.io/badge/MySQL-8.0-blue?style=for-the-badge&logo=mysql" />
+  <img src="https://img.shields.io/badge/MyBatis_Plus-3.5.7-red?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Redis-Latest-DC382D?style=for-the-badge&logo=redis&logoColor=white" />
+  <img src="https://img.shields.io/badge/JWT-Auth-000000?style=for-the-badge&logo=jsonwebtokens" />
+</p>
+
+<br>
+
+<h3 align="center">🚀 让校园生活从未如此极客</h3>
+
+<p align="center">
+  <a href="#-系统架构">🗺️ 系统架构</a> •
+  <a href="#-快速部署">⚡ 快速部署</a> •
+  <a href="http://localhost:8080/doc.html">📖 接口文档</a> •
+  <a href="#-贡献指南">🤝 贡献指南</a>
+</p>
 
 </div>
 
 ---
 
-## ✨ 项目亮点
+## 📊 极客统计 (GitHub Stats)
 
-```
- ██████╗ █████╗ ███╗   ███╗██████╗ ██╗   ██╗███████╗
-██╔════╝██╔══██╗████╗ ████║██╔══██╗██║   ██║██╔════╝
-██║     ███████║██╔████╔██║██████╔╝██║   ██║███████╗
-██║     ██╔══██║██║╚██╔╝██║██╔═══╝ ██║   ██║╚════██║
-╚██████╗██║  ██║██║ ╚═╝ ██║██║     ╚██████╔╝███████║
- ╚═════╝╚═╝  ╚═╝╚═╝     ╚═╝╚═╝      ╚═════╝ ╚══════╝
-```
+<div align="center">
+  <table style="border: none;">
+    <tr>
+      <td style="border: none; padding-right: 20px;">
+        <!-- 你的代码能力值卡片 -->
+        <img src="https://github-readme-stats.vercel.app/api?username=lxxxDD&show_icons=true&theme=radical&count_private=true&hide_border=true" alt="lxxxDD's Stats" />
+      </td>
+      <td style="border: none;">
+        <!-- 语言使用分布 -->
+        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=lxxxDD&layout=compact&theme=radical&hide_border=true&langs_count=6" alt="Top Langs" />
+      </td>
+    </tr>
+  </table>
+</div>
 
-> 🎯 **一站式校园生活服务平台** - 让校园生活更便捷、更智能！
+## 🗺️ 系统架构 (System Architecture)
 
-## 🛠️ 技术栈
+```mermaid
+graph TD
+    Client[📱 移动端 / 💻 管理后台] -->|RESTful API| Gateway[🌐 Nginx 网关]
+    
+    subgraph "Core Server (Spring Boot)"
+        Gateway --> Auth[🔐 认证授权 (JWT)]
+        Auth --> Controller[🎮 控制层 (Web)]
+        
+        subgraph "Business Logic"
+            Controller --> UserService[👤 用户服务]
+            Controller --> MarketService[🛒 市场服务]
+            Controller --> LifeService[🌈 生活服务]
+        end
+        
+        Business Logic --> MP[🛠️ MyBatis-Plus]
+    end
+    
+    subgraph "Data Storage"
+        MP --> MySQL[(�️ MySQL 主库)]
+        LifeService --> Redis[(� Redis 缓存)]
+        MarketService --> OSS[(☁️ 文件存储)]
+    end
+    
+    subgraph "External"
+        LifeService --> AI[🤖 AI 大模型接口]
+    end
 
-<table>
-<tr>
-<td align="center" width="96">
-<img src="https://skillicons.dev/icons?i=spring" width="48" height="48" alt="Spring" />
-<br>Spring Boot
-</td>
-<td align="center" width="96">
-<img src="https://skillicons.dev/icons?i=java" width="48" height="48" alt="Java" />
-<br>Java 17
-</td>
-<td align="center" width="96">
-<img src="https://skillicons.dev/icons?i=mysql" width="48" height="48" alt="MySQL" />
-<br>MySQL
-</td>
-<td align="center" width="96">
-<img src="https://skillicons.dev/icons?i=redis" width="48" height="48" alt="Redis" />
-<br>Redis
-</td>
-<td align="center" width="96">
-<img src="https://skillicons.dev/icons?i=maven" width="48" height="48" alt="Maven" />
-<br>Maven
-</td>
-</tr>
-</table>
-
-## 🎯 功能模块
-
-| 模块 | 功能 | 状态 |
-|:---:|:---|:---:|
-| 👤 **用户中心** | 注册登录 · 个人信息 · 实名认证 | ✅ |
-| 🛒 **二手市场** | 商品发布 · 智能搜索 · 收藏关注 | ✅ |
-| 🍜 **食堂点餐** | 在线点餐 · 订单追踪 · 评价系统 | ✅ |
-| 🔧 **校园报修** | 一键报修 · 进度追踪 · 服务评价 | ✅ |
-| 📅 **校园活动** | 活动发布 · 在线报名 · 签到打卡 | ✅ |
-| 📰 **校园新闻** | 资讯浏览 · 分类展示 · 热点推送 | ✅ |
-| 💬 **即时通讯** | 在线聊天 · 消息推送 · WebSocket | ✅ |
-| 🤖 **AI助手** | 智能问答 · 校园导航 · 生活助手 | ✅ |
-
-## 🚀 快速开始
-
-### 📋 环境要求
-
-```yaml
-Java: 17+
-Maven: 3.6+
-MySQL: 8.0+
+    style Client fill:#f9f,stroke:#333,stroke-width:2px
+    style Gateway fill:#bbf,stroke:#333,stroke-width:2px
+    style Core Server fill:#dfd,stroke:#333,stroke-width:2px
+    style Data Storage fill:#ffd,stroke:#333,stroke-width:2px
 ```
 
-### ⚡ 一键启动
+## ⚡ 核心能力 (Core Capabilities)
+
+<details>
+<summary><b>🔥 点击展开查看硬核功能列表</b></summary>
+<br>
+
+| 领域 | 核心功能 | 技术实现 |
+| :--- | :--- | :--- |
+| **� 安全架构** | JWT无状态认证、RBAC权限模型 | `HandlerInterceptor`, `@CheckToken` |
+| **🚀 高性能** | 多级缓存架构、连接池优化 | `Redis`, `HikariCP` |
+| **� 即时通讯** | WebSocket全双工通信、消息持久化 | `ServerEndpoint`, `ConcurrentHashMap` |
+| **🤖 AI集成** | 智能对话上下文管理、流式响应 | `OkHttp`, `SSE` |
+| **� 文档工程** | 自动化接口文档、在线调试 | `Knife4j`, `Swagger 3` |
+| **�️ 代码生成** | 快速构建CRUD、统一响应体 | `MyBatis-Plus Generator`, `Result<T>` |
+
+</details>
+
+## 🚀 极速部署 (Quick Start)
+
+> ⚠️ **Warning**: 下面的操作可能会导致你不仅帅，而且快。
 
 ```bash
-# 🔽 克隆项目
+# 1. ⬇️ 下载神器的源代码
 git clone https://github.com/lxxxDD/campus-life-server.git
 
-# 📂 进入目录
+# 2. 🚀 进入发射基地
 cd campus-life-server
 
-# 🗄️ 导入数据库 (执行 sql/ 目录下的脚本)
+# 3. 💣 装填弹药 (数据库)
+# 执行 sql/init.sql 初始化数据库结构
 
-# ⚙️ 配置数据库连接
-# 编辑 src/main/resources/application.yml
+# 4. ⚙️ 调整参数
+# vim src/main/resources/application.yml
 
-# 🚀 启动项目
+# 5. 🔥 点火发射！
 mvn spring-boot:run
 ```
 
-### 📚 API文档
+## 🤝 贡献者 (Contributors)
 
-启动后访问: **http://localhost:8080/doc.html**
-
-<img src="https://img.shields.io/badge/Knife4j-API%20Doc-blue?style=flat-square" />
-
-## 📁 项目结构
-
-```
-📦 CampusLifeServer
- ┣ 📂 src/main/java
- ┃ ┣ 📂 common        # 🔧 通用组件
- ┃ ┣ 📂 config        # ⚙️ 配置类
- ┃ ┣ 📂 controller    # 🎮 控制器
- ┃ ┣ 📂 entity        # 📋 实体类
- ┃ ┣ 📂 mapper        # 🗺️ Mapper接口
- ┃ ┣ 📂 service       # 💼 业务逻辑
- ┃ ┗ 📂 util          # 🛠️ 工具类
- ┣ 📂 sql             # 📜 数据库脚本
- ┗ 📂 uploads         # 📁 上传文件
-```
-
-## 🔗 相关项目
-
-<table>
-<tr>
-<td align="center">
-<a href="https://github.com/lxxxDD/campus-life-app">
-<img src="https://img.shields.io/badge/📱-移动端-green?style=for-the-badge" />
+<a href="https://github.com/lxxxDD/campus-life-server/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=lxxxDD/campus-life-server" />
 </a>
-<br><sub>uni-app + Vue</sub>
-</td>
-<td align="center">
-<a href="https://github.com/lxxxDD/campus-life-admin">
-<img src="https://img.shields.io/badge/💻-管理后台-blue?style=for-the-badge" />
-</a>
-<br><sub>Vue 3 + Element Plus</sub>
-</td>
-</tr>
-</table>
 
 ---
 
 <div align="center">
 
-**⭐ 如果这个项目对你有帮助，请点个Star支持一下！**
+**Code with ☕ and ❤️**
 
-Made with ❤️ by [lxxxDD](https://github.com/lxxxDD)
+[![Star History Chart](https://api.star-history.com/svg?repos=lxxxDD/campus-life-server&type=Date)](https://star-history.com/#lxxxDD/campus-life-server&Date)
 
 </div>
+
