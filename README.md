@@ -70,29 +70,29 @@
 
 ```mermaid
 graph TD
-    Client(移动端 / 管理后台) -->|RESTful API| Gateway(Nginx 网关)
+    Client("移动端 / 管理后台") -->|RESTful API| Gateway("Nginx 网关")
     
     subgraph "Core Server (Spring Boot)"
-        Gateway --> Auth(认证授权 JWT)
-        Auth --> Controller(控制层 Web)
+        Gateway --> Auth("认证授权 JWT")
+        Auth --> Controller("控制层 Web")
         
         subgraph "Business Logic"
-            Controller --> UserService(用户服务)
-            Controller --> MarketService(市场服务)
-            Controller --> LifeService(生活服务)
+            Controller --> UserService("用户服务")
+            Controller --> MarketService("市场服务")
+            Controller --> LifeService("生活服务")
         end
         
-        Business Logic --> MP(MyBatis-Plus)
+        Business Logic --> MP("MyBatis-Plus")
     end
     
     subgraph "Data Storage"
-        MP --> MySQL[(MySQL 主库)]
-        LifeService --> Redis[(Redis 缓存)]
-        MarketService --> OSS[(文件存储)]
+        MP --> MySQL[("MySQL 主库")]
+        LifeService --> Redis[("Redis 缓存")]
+        MarketService --> OSS[("文件存储")]
     end
     
     subgraph "External"
-        LifeService --> AI(AI 大模型接口)
+        LifeService --> AI("AI 大模型接口")
     end
 
     style Client fill:#f9f,stroke:#333,stroke-width:2px
