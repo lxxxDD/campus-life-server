@@ -2,6 +2,11 @@
 
 # 🎓 Campus Life Server
 
+<!-- 动态打字机效果 -->
+<a href="https://github.com/lxxxDD/campus-life-server">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=40&duration=3000&pause=1000&color=BD93F9&center=true&vCenter=true&width=600&lines=Campus+Life+Server;Spring+Boot+Eco-System;Next+Gen+Campus+Solution" alt="Typing SVG" />
+</a>
+
 <!-- 技术栈徽章 -->
 <p>
   <img src="https://img.shields.io/badge/Spring_Boot-3.3.5-brightgreen?style=for-the-badge&logo=springboot" />
@@ -65,10 +70,21 @@ graph TD
         LifeService --> AI("AI 大模型接口")
     end
 
-    style Client fill:#f9f,stroke:#333,stroke-width:2px
-    style Gateway fill:#bbf,stroke:#333,stroke-width:2px
-    style CoreServer fill:#dfd,stroke:#333,stroke-width:2px
-    style DataStorage fill:#ffd,stroke:#333,stroke-width:2px
+    %% Dracula Color Palette
+    %% Purple: #bd93f9
+    %% Cyan: #8be9fd
+    %% Green: #50fa7b
+    %% Orange: #ffb86c
+    %% Pink: #ff79c6
+    %% Selection: #44475a
+    
+    style Client fill:#bd93f9,stroke:#44475a,stroke-width:2px,color:#282a36
+    style Gateway fill:#8be9fd,stroke:#44475a,stroke-width:2px,color:#282a36
+    style CoreServer fill:#50fa7b,stroke:#44475a,stroke-width:2px,color:#282a36
+    style DataStorage fill:#ffb86c,stroke:#44475a,stroke-width:2px,color:#282a36
+    style External fill:#ff79c6,stroke:#44475a,stroke-width:2px,color:#282a36
+    
+    linkStyle default stroke:#6272a4,stroke-width:2px
 ```
 
 ## 🧬 核心流程 (Core Process)
